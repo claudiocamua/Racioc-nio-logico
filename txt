@@ -5,8 +5,8 @@
 /* 
 Antonio Claudio Sousa das Chagas - 2525037
 Lizandro Filizola de Medeiros - 2523595
-Leopoldo Farias Moura Neto - 1921313
-Jose Lucas Carvalho de Oliveira - 2527214
+Leopoldo Farias Moura Neto - 2527214
+José Lucas Carvalho de Oliveira 2527038
 */
 
 var N = parseInt(prompt("Quantidade de Alunos: "));
