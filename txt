@@ -6,7 +6,7 @@
 Antonio Claudio Sousa das Chagas - 2525037
 Lizandro Filizola de Medeiros - 2523595
 Leopoldo Farias Moura Neto - 1921313
-Jose Lucas Carvalho de Oliveira - 2527038
+Jose Lucas Carvalho de Oliveira - 2527214
 */
 
 var N = parseInt(prompt("Quantidade de Alunos: "));
@@ -17,8 +17,9 @@ var aprovados = 0;
 var reprovados = 0;
 
 for (let i = 0; i < N; i++) {
-    notas1[i] = parseFloat((Math.random() * 10).toFixed(2));
-    notas2[i] = parseFloat((Math.random() * 10).toFixed(2));
+
+    notas1[i] = parseFloat(prompt("Digite a nota AV1 do aluno " + (i + 1) + ":"));
+    notas2[i] = parseFloat(prompt("Digite a nota AV2 do aluno " + (i + 1) + ":"));
 
     media[i] = parseFloat(((notas1[i] + notas2[i]) / 2).toFixed(2));
 
