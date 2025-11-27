@@ -1,0 +1,49 @@
+
+ <meta charset="UTF-8">
+
+<script>
+/* 
+Antonio Claudio Sousa das Chagas - 2525037
+Lizandro Filizola de Medeiros - 2523595
+Leopoldo Farias Moura Neto - 1921313
+Jose Lucas Carvalho de Oliveira - 2527038
+*/
+
+var N = parseInt(prompt("Quantidade de Alunos: "));
+var notas1 = new Array(N);
+var notas2 = new Array(N);
+var media = new Array(N);
+var aprovados = 0;
+var reprovados = 0;
+
+for (let i = 0; i < N; i++) {
+
+    notas1[i] = parseFloat(prompt("Digite a nota AV1 do aluno " + (i + 1) + ":"));
+    notas2[i] = parseFloat(prompt("Digite a nota AV2 do aluno " + (i + 1) + ":"));
+
+    media[i] = parseFloat(((notas1[i] + notas2[i]) / 2).toFixed(2));
+
+    if (media[i] > 5.0) {
+        aprovados++;
+    } else {
+        reprovados++;
+    }
+}
+
+for (let i = 0; i < N - 1; i++) {
+    for (let j = 0; j < N - 1 - i; j++) {
+        if (media[j] > media[j + 1]) {
+            let aux = media[j];
+            media[j] = media[j + 1];
+            media[j + 1] = aux;
+        }
+    }
+}
+
+document.write("<h2>Resultados da Turma</h2>");
+document.write("<strong>Notas 1:</strong> " + notas1.join(", ") + "<br>");
+document.write("<strong>Notas 2:</strong> " + notas2.join(", ") + "<br><br>");
+document.write("<strong>Médias (ordenadas):</strong> " + media.join(", ") + "<br><br>");
+document.write("<strong>Aprovados:</strong> " + aprovados + "<br>");
+document.write("<strong>Reprovados:</strong> " + reprovados + "<br>");
+</script>
